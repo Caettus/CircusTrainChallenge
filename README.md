@@ -1,10 +1,10 @@
 # CircustreinChallenge
 Algoritmiek opdracht door Vincent Scheffer
--------
 Semester 2 DB-01
 
 
-# Requirements
+Requirements
+---------------
 1. Mogelijkheid om dieren toe te voegen
   - Selecteer carnivoor of herbivoor
   - Selecteer groot, middle of klein
