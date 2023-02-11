@@ -13,4 +13,7 @@ int.TryParse(input, out int QuantityAnimals);
 train = new Train();
 train.GenerateNewAnimals(QuantityAnimals);
 
+var rnd = new Random();
+return (Size) rnd.Next(Enum.GetNames(typeof(Size)).Length);
+
 Console.WriteLine(train.TotalAnimals.Count);
