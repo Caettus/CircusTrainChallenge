@@ -1,5 +1,6 @@
 ﻿using ClassLibrary;
 
+Animal animal;
 Train train;
 
 Console.WriteLine("Welcome to the Animal to Wagon Optimization project!");
@@ -10,10 +11,11 @@ Console.WriteLine("How many animals do you want");
 string input = Console.ReadLine();
 int.TryParse(input, out int QuantityAnimals);
 
-train = new Train();
-train.GenerateNewAnimals(QuantityAnimals);
+animal = new Animal();
+animal.GenerateNewAnimals(QuantityAnimals);
 
-var rnd = new Random();
-return (Size) rnd.Next(Enum.GetNames(typeof(Size)).Length);
-
-Console.WriteLine(train.TotalAnimals.Count);
+train= new Train();
+foreach (var animaL in train.TotalAnimals)
+{
+    Console.WriteLine($"Size: {animaL.size} Diet: {animaL.diet}");
+}
