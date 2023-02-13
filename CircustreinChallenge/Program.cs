@@ -11,11 +11,12 @@ Console.WriteLine("How many animals do you want");
 string input = Console.ReadLine();
 int.TryParse(input, out int QuantityAnimals);
 
-animal = new Animal();
-animal.GenerateNewAnimals(QuantityAnimals);
+train = new Train();
+train.GenerateNewAnimals(QuantityAnimals);
 
-train= new Train();
-foreach (var animaL in train.TotalAnimals)
+train.SortAnimalList();
+
+foreach (Animal animaL in train.MAIN)
 {
-    Console.WriteLine($"Size: {animaL.size} Diet: {animaL.diet}");
+    Console.WriteLine("{0} - {1}", animaL.Diet, animaL.Size);
 }
