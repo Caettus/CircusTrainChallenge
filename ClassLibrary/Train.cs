@@ -5,9 +5,14 @@ public class Train
     private List<Animal> TotalAnimals = new List<Animal>();
     private List<Animal> TempAnimalsList = new List<Animal>();
     public List<Animal> OrderedAnimals = new List<Animal>();
-    List<Wagon> wagons = new List<Wagon>();
+    public List<Wagon> wagons = new List<Wagon>();
 
     Random rnd = new Random();
+
+    //public Train()
+    //{
+    //    wagons = new List<Wagon>();
+    //}
 
 
     public void GenerateNewAnimals(int numberofAnimalsToAdd)
@@ -55,5 +60,29 @@ public class Train
     {
         TempAnimalsList = TotalAnimals.OrderByDescending(Animal => Animal.Size).ToList();
         OrderedAnimals = TempAnimalsList.OrderBy(Animal => Animal.Diet).ToList();
+    }
+
+    public void AddAnimalsToWagons()
+    {
+        foreach (Animal animal in OrderedAnimals)
+        {
+            bool added = false;
+            foreach (Wagon wagon in wagons)
+            {
+                if (wagon.Size >= (int)animal.Size)
+                {
+                    wagon.AddAnimal(animal);
+                    added = true;
+                    break;
+                }
+            }
+
+            if (!added)
+            {
+                Wagon newWagon = new Wagon();
+                newWagon.AddAnimal(animal);
+                wagons.Add(newWagon);
+            }
+        }
     }
 }
