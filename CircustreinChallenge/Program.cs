@@ -16,7 +16,7 @@ train.GenerateNewAnimals(QuantityAnimals);
 
 train.SortAnimalList();
 
-foreach (Animal animaL in train.MAIN)
+foreach (Animal animaL in train.OrderedAnimals)
 {
     Console.WriteLine("{0} - {1}", animaL.Diet, animaL.Size);
 }

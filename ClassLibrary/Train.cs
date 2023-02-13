@@ -2,14 +2,15 @@ namespace ClassLibrary;
 
 public class Train
 {
-    public List<Animal> TotalAnimals = new List<Animal>();
-    public List<Animal> MAIN = new List<Animal>();
+    private List<Animal> TotalAnimals = new List<Animal>();
+    private List<Animal> TempAnimalsList = new List<Animal>();
+    public List<Animal> OrderedAnimals = new List<Animal>();
     List<Wagon> wagons = new List<Wagon>();
 
     Random rnd = new Random();
 
 
-    public List<Animal> GenerateNewAnimals(int numberofAnimalsToAdd)
+    public void GenerateNewAnimals(int numberofAnimalsToAdd)
     {
         for (int i = 0; i < numberofAnimalsToAdd; i++)
         {
@@ -48,13 +49,11 @@ public class Train
             Animal newanimal = new Animal(diet, size);
             TotalAnimals.Add(newanimal);
         }
-
-        return (TotalAnimals);
     }
 
     public void SortAnimalList()
     {
-        List<Animal> TEMP = TotalAnimals.OrderByDescending(Animal => Animal.Size).ToList();
-        List<Animal> MAIN = TEMP.OrderByDescending(Animal => Animal.Diet).ToList();
+        TempAnimalsList = TotalAnimals.OrderByDescending(Animal => Animal.Size).ToList();
+        OrderedAnimals = TempAnimalsList.OrderBy(Animal => Animal.Diet).ToList();
     }
 }
