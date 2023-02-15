@@ -31,7 +31,7 @@ train.AddAnimalsToWagons();
 for (int i = 0; i < train.wagons.Count; i++)
 {
     Console.WriteLine("Wagon " + (i + 1) + ":");
-    foreach (Animal _animal in train.wagons[i].Animals)
+    foreach (Animal _animal in train.wagons[i].WagonAnimals)
     {
         Console.WriteLine("    " + _animal.Diet + " " + _animal.Size);
     }
