@@ -2,6 +2,7 @@
 
 Animal animal;
 Train train;
+Wagon wagon;
 
 Console.WriteLine("Welcome to the Animal to Wagon Optimization project!");
 Console.WriteLine("====================================================");
@@ -26,7 +27,8 @@ foreach (Animal animaL in train.OrderedAnimals)
 
 Console.Write("====================================");
 
-train.AddAnimalsToWagons();
+wagon = new Wagon();
+wagon.AddAnimalsToWagons();
 
 for (int i = 0; i < train.wagons.Count; i++)
 {
