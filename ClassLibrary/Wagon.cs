@@ -18,11 +18,9 @@ public class Wagon
     {
         if (Size >= (int)animal.Size)
         {
-            // WagonAnimals.Add(animal);
-            
-            if (animal.Diet == Diet.Carnivore)
+            if (CheckIfRuzie(animal) == false)
             {
-                return false;
+                WagonAnimals.Add(animal);
             }
         }
         return false;
@@ -34,14 +32,19 @@ public class Wagon
         {
             return true;
         }
-        else if (Animal.SmallHerbivore == true && WagonAnimals.Contains(Animal.Carnivore))
+        else if (animal == Animal.SmallHerbivore && WagonAnimals.Contains(Animal.Carnivore))
         {
             return true;
         }
+        else if (animal == Animal.Carnivore && animal.Size == ClassLibrary.Size.Medium && !WagonAnimals.Contains(Animal.LargeHerbivore))
+        {
+            return false;
+        }
         
+        return false;
     }
     
     
-    //TODO: Size moet 10 blijven, size is 10 min 
+    //TODO: Size moet 10 blijven, Ik moet checken of het nieuwe dier  en de opgetelde hoeveelheid aan dieren die al in de wagon zit, of dat samen meer dan 10 is of niet.
     //TODO: 
 }

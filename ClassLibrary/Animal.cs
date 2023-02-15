@@ -24,9 +24,15 @@ public class Animal
         get => new Animal(Diet.Herbivore, Size.Small);
     }
 
+    public static Animal LargeHerbivore
+    {
+        get => new Animal(Diet.Herbivore, Size.Large);
+    }
+
     public static Animal Carnivore
     {
         get => new Animal(ClassLibrary.Diet.Carnivore);
     }
+
 
 }
