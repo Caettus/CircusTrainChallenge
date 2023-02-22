@@ -12,7 +12,7 @@ namespace CircustreinTest
         {
             // Arrange
             train = new Train();
-            
+
             train.TotalAnimals.Add(Animal.SmallCarnivore);
             train.TotalAnimals.Add(Animal.LargeHerbivore);
             train.TotalAnimals.Add(Animal.LargeHerbivore);
@@ -152,6 +152,21 @@ namespace CircustreinTest
             train.TotalAnimals.Add(Animal.MediumCarnivore);
             train.TotalAnimals.Add(Animal.MediumCarnivore);
             train.TotalAnimals.Add(Animal.MediumCarnivore);
+            train.TotalAnimals.Add(Animal.LargeCarnivore);
+            train.TotalAnimals.Add(Animal.LargeCarnivore);
+            train.TotalAnimals.Add(Animal.LargeCarnivore);
+
+            train.TotalAnimals.Add(Animal.MediumHerbivore);
+            train.TotalAnimals.Add(Animal.MediumHerbivore);
+            train.TotalAnimals.Add(Animal.MediumHerbivore);
+            train.TotalAnimals.Add(Animal.MediumHerbivore);
+            train.TotalAnimals.Add(Animal.MediumHerbivore);
+            train.TotalAnimals.Add(Animal.LargeHerbivore);
+            train.TotalAnimals.Add(Animal.LargeHerbivore);
+            train.TotalAnimals.Add(Animal.LargeHerbivore);
+            train.TotalAnimals.Add(Animal.LargeHerbivore);
+            train.TotalAnimals.Add(Animal.LargeHerbivore);
+            train.TotalAnimals.Add(Animal.LargeHerbivore);
             train.SortAnimalList();
 
             // Act

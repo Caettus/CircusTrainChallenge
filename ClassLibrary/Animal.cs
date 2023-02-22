@@ -2,7 +2,7 @@
 
 public class Animal
 {
-    
+
     public Diet Diet { get; private set; }
 
     public Size Size { get; private set; }
@@ -30,7 +30,7 @@ public class Animal
     {
         get => new Animal(ClassLibrary.Diet.Herbivore, Size.Large);
     }
-    
+
     public static Animal SmallCarnivore
     {
         get => new Animal(ClassLibrary.Diet.Carnivore, Size.Small);
