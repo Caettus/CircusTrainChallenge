@@ -1,8 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CircustreinChallenge", "CircustreinChallenge\CircustreinChallenge.csproj", "{C6B49654-BBA1-442A-A20E-3567AF9DD053}"
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33403.182
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CircustreinChallenge", "CircustreinChallenge\CircustreinChallenge.csproj", "{C6B49654-BBA1-442A-A20E-3567AF9DD053}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary", "ClassLibrary\ClassLibrary.csproj", "{B1A36EDD-2D7F-40D2-8250-AEB9AEB11472}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassLibrary", "ClassLibrary\ClassLibrary.csproj", "{B1A36EDD-2D7F-40D2-8250-AEB9AEB11472}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CircustreinTest", "CircustreinTest\CircustreinTest.csproj", "{E77522FF-6ED1-4E39-98BD-C920421BE992}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,5 +23,15 @@ Global
 		{B1A36EDD-2D7F-40D2-8250-AEB9AEB11472}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B1A36EDD-2D7F-40D2-8250-AEB9AEB11472}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B1A36EDD-2D7F-40D2-8250-AEB9AEB11472}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E77522FF-6ED1-4E39-98BD-C920421BE992}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E77522FF-6ED1-4E39-98BD-C920421BE992}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E77522FF-6ED1-4E39-98BD-C920421BE992}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E77522FF-6ED1-4E39-98BD-C920421BE992}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EC430639-92E3-4CA2-A838-F3311E2443A9}
 	EndGlobalSection
 EndGlobal

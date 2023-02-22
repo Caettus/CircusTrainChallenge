@@ -4,7 +4,7 @@ namespace ClassLibrary;
 
 public class Train
 {
-    private List<Animal> TotalAnimals = new List<Animal>();
+    public List<Animal> TotalAnimals = new List<Animal>();
     private List<Animal> TempAnimalsList = new List<Animal>();
     public List<Animal> OrderedAnimals = new List<Animal>();
     public List<Wagon> wagons = new List<Wagon>();
