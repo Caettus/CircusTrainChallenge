@@ -1,8 +1,6 @@
 ﻿using ClassLibrary;
 
-Animal animal;
 Train train;
-Wagon wagon;
 
 Console.WriteLine("Welcome to the Animal to Wagon Optimization project!");
 Console.WriteLine("====================================================");
@@ -25,10 +23,9 @@ foreach (Animal animaL in train.OrderedAnimals)
     Console.WriteLine("{0} - {1}", animaL.Diet, animaL.Size);
 }
 
-Console.Write("====================================");
+Console.WriteLine("====================================");
 
-wagon = new Wagon();
-wagon.AddAnimalsToWagons();
+train.AddAnimalsToWagons();
 
 for (int i = 0; i < train.wagons.Count; i++)
 {

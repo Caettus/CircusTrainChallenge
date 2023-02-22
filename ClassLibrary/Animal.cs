@@ -33,6 +33,4 @@ public class Animal
     {
         get => new Animal(ClassLibrary.Diet.Carnivore);
     }
-
-
 }

@@ -9,7 +9,7 @@ public class Train
     public List<Animal> OrderedAnimals = new List<Animal>();
     public List<Wagon> wagons = new List<Wagon>();
 
-    
+
     Random rnd = new Random();
 
     public void GenerateNewAnimals(int numberofAnimalsToAdd)
@@ -21,7 +21,7 @@ public class Train
 
             int randomSize = rnd.Next(0, 3);
             int randomDiet = rnd.Next(0, 2);
-            
+
             #region ifStatements
 
             if (randomSize == 0)
@@ -61,11 +61,10 @@ public class Train
 
     public void MakeNewWagon(Animal animal)
     {
-        Wagon newWagon = new Wagon();
-        newWagon.AddAnimal(animal);
+        Wagon newWagon = new Wagon(animal);
         wagons.Add(newWagon);
     }
-    
+
     public void AddAnimalsToWagons()
     {
         foreach (Animal animal in OrderedAnimals)
@@ -73,17 +72,16 @@ public class Train
             bool added = false;
             foreach (Wagon wagon in wagons)
             {
-                if (wagon.TryToAddAnimal(animal) == true)
+                if (wagon.TryToAddAnimal(animal))
                 {
-                    MakeNewWagon(animal);
+                    added = true;
+                    break;
                 }
             }
-            
             if (!added)
             {
                 MakeNewWagon(animal);
             }
         }
     }
-
 }
