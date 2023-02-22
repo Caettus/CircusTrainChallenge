@@ -12,7 +12,13 @@ namespace CircustreinTest
         {
             // Arrange
             train = new Train();
-            train.GenerateNewAnimals(4);
+            
+            train.TotalAnimals.Add(Animal.SmallCarnivore);
+            train.TotalAnimals.Add(Animal.LargeHerbivore);
+            train.TotalAnimals.Add(Animal.LargeHerbivore);
+            train.TotalAnimals.Add(Animal.MediumHerbivore);
+            train.TotalAnimals.Add(Animal.MediumHerbivore);
+            train.TotalAnimals.Add(Animal.MediumHerbivore);
             train.SortAnimalList();
 
             // Act
@@ -27,7 +33,15 @@ namespace CircustreinTest
         {
             // Arrange
             train = new Train();
-            train.GenerateNewAnimals(5);
+            train.TotalAnimals.Add(Animal.SmallCarnivore);
+            train.TotalAnimals.Add(Animal.LargeHerbivore);
+            train.TotalAnimals.Add(Animal.MediumHerbivore);
+            train.TotalAnimals.Add(Animal.MediumHerbivore);
+            train.TotalAnimals.Add(Animal.SmallHerbivore);
+            train.TotalAnimals.Add(Animal.SmallHerbivore);
+            train.TotalAnimals.Add(Animal.SmallHerbivore);
+            train.TotalAnimals.Add(Animal.SmallHerbivore);
+            train.TotalAnimals.Add(Animal.SmallHerbivore);
             train.SortAnimalList();
 
             // Act
@@ -42,7 +56,12 @@ namespace CircustreinTest
         {
             // Arrange
             train = new Train();
-            train.GenerateNewAnimals(7);
+            train.TotalAnimals.Add(Animal.SmallCarnivore);
+            train.TotalAnimals.Add(Animal.MediumCarnivore);
+            train.TotalAnimals.Add(Animal.LargeCarnivore);
+            train.TotalAnimals.Add(Animal.SmallHerbivore);
+            train.TotalAnimals.Add(Animal.MediumHerbivore);
+            train.TotalAnimals.Add(Animal.LargeHerbivore);
             train.SortAnimalList();
 
             // Act
@@ -57,7 +76,17 @@ namespace CircustreinTest
         {
             // Arrange
             train = new Train();
-            train.GenerateNewAnimals(10);
+            train.TotalAnimals.Add(Animal.SmallCarnivore);
+            train.TotalAnimals.Add(Animal.SmallCarnivore);
+            train.TotalAnimals.Add(Animal.MediumCarnivore);
+            train.TotalAnimals.Add(Animal.LargeCarnivore);
+            train.TotalAnimals.Add(Animal.SmallHerbivore);
+            train.TotalAnimals.Add(Animal.MediumHerbivore);
+            train.TotalAnimals.Add(Animal.MediumHerbivore);
+            train.TotalAnimals.Add(Animal.MediumHerbivore);
+            train.TotalAnimals.Add(Animal.MediumHerbivore);
+            train.TotalAnimals.Add(Animal.MediumHerbivore);
+            train.TotalAnimals.Add(Animal.LargeHerbivore);
             train.SortAnimalList();
 
             // Act
@@ -72,7 +101,11 @@ namespace CircustreinTest
         {
             // Arrange
             train = new Train();
-            train.GenerateNewAnimals(2);
+            train.TotalAnimals.Add(Animal.SmallCarnivore);
+            train.TotalAnimals.Add(Animal.SmallHerbivore);
+            train.TotalAnimals.Add(Animal.MediumHerbivore);
+            train.TotalAnimals.Add(Animal.LargeHerbivore);
+            train.TotalAnimals.Add(Animal.LargeHerbivore);
             train.SortAnimalList();
 
             // Act
@@ -87,7 +120,14 @@ namespace CircustreinTest
         {
             // Arrange
             train = new Train();
-            train.GenerateNewAnimals(15);
+            train.TotalAnimals.Add(Animal.SmallCarnivore);
+            train.TotalAnimals.Add(Animal.SmallCarnivore);
+            train.TotalAnimals.Add(Animal.SmallCarnivore);
+            train.TotalAnimals.Add(Animal.MediumCarnivore);
+            train.TotalAnimals.Add(Animal.MediumCarnivore);
+            train.TotalAnimals.Add(Animal.LargeCarnivore);
+            train.TotalAnimals.Add(Animal.LargeCarnivore);
+            train.TotalAnimals.Add(Animal.LargeCarnivore);
             train.SortAnimalList();
 
             // Act
@@ -102,7 +142,16 @@ namespace CircustreinTest
         {
             // Arrange
             train = new Train();
-            train.GenerateNewAnimals(100);
+            train.TotalAnimals.Add(Animal.SmallCarnivore);
+            train.TotalAnimals.Add(Animal.SmallCarnivore);
+            train.TotalAnimals.Add(Animal.SmallCarnivore);
+            train.TotalAnimals.Add(Animal.SmallCarnivore);
+            train.TotalAnimals.Add(Animal.SmallCarnivore);
+            train.TotalAnimals.Add(Animal.SmallCarnivore);
+            train.TotalAnimals.Add(Animal.SmallCarnivore);
+            train.TotalAnimals.Add(Animal.MediumCarnivore);
+            train.TotalAnimals.Add(Animal.MediumCarnivore);
+            train.TotalAnimals.Add(Animal.MediumCarnivore);
             train.SortAnimalList();
 
             // Act
