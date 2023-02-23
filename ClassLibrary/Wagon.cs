@@ -29,14 +29,18 @@ public class Wagon
 
     public bool CheckIfRuzie(Animal animal)
     {
-
         if (animal.Diet == Diet.Herbivore && animal.Size > this.WagonAnimals[0].Size)
+        {
+            return false;
+        }
+        else if (this.WagonAnimals[0].Diet == Diet.Carnivore && animal.Diet == Diet.Herbivore &&
+                 animal.Size > this.WagonAnimals[0].Size)
         {
             return false;
         }
         else if (this.WagonAnimals[0].Diet == Diet.Herbivore)
         {
-            return false;
+             return false;
         }
         else
         {
@@ -70,7 +74,4 @@ public class Wagon
         }
         return false;
     }
-
-
-    //TODO: Size moet 10 blijven, Ik moet checken of het nieuwe dier  en de opgetelde hoeveelheid aan dieren die al in de wagon zit, of dat samen meer dan 10 is of niet.
 }
