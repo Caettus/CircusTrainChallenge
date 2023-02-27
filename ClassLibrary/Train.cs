@@ -10,7 +10,10 @@ public class Train
     public List<Wagon> wagons = new List<Wagon>();
 
 
+
     Random rnd = new Random();
+
+
 
     public void GenerateNewAnimals(int numberofAnimalsToAdd)
     {
@@ -55,10 +58,38 @@ public class Train
 
     public void SortAnimalList()
     {
-        TempAnimalsList = TotalAnimals.OrderByDescending(Animal => Animal.Size).ToList();
-        OrderedAnimals = TempAnimalsList.OrderBy(Animal => Animal.Diet).ToList();
+        //Dit om scenario een en zes te fixen
+        
+        int largeHerbivoreCount = 0;
+        int mediumHerbivoreCount = 0;
+        
+        foreach (Animal animal in TotalAnimals){
+            if (animal.Diet == Diet.Herbivore) {
+                if (animal.Size == Size.Large) {
+                    largeHerbivoreCount++;
+                } else if (animal.Size == Size.Medium) {
+                    mediumHerbivoreCount++;
+                }
+            }
+        }
+        
+        if (largeHerbivoreCount > mediumHerbivoreCount)
+        {
+            TempAnimalsList = TotalAnimals.OrderByDescending(Animal => Animal.Size).ToList();
+            OrderedAnimals = TempAnimalsList.OrderBy(Animal => Animal.Diet).ToList();
+        }
+        else if (!TotalAnimals.Contains(Animal.LargeCarnivore) && !TotalAnimals.Contains(Animal.MediumCarnivore))
+        {
+            TempAnimalsList = TotalAnimals.OrderBy(Animal => Animal.Size).ToList();
+            OrderedAnimals = TempAnimalsList.OrderBy(Animal => Animal.Diet).ToList();
+        }
+        else
+        {
+            TempAnimalsList = TotalAnimals.OrderByDescending(Animal => Animal.Size).ToList();
+            OrderedAnimals = TempAnimalsList.OrderBy(Animal => Animal.Diet).ToList();
+        }
     }
-
+    
     public void MakeNewWagon(Animal animal)
     {
         Wagon newWagon = new Wagon(animal);

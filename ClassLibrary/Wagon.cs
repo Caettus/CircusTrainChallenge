@@ -33,11 +33,6 @@ public class Wagon
         {
             return false;
         }
-        else if (this.WagonAnimals[0].Diet == Diet.Carnivore && animal.Diet == Diet.Herbivore &&
-                 animal.Size > this.WagonAnimals[0].Size)
-        {
-            return false;
-        }
         else if (this.WagonAnimals[0].Diet == Diet.Herbivore)
         {
              return false;
